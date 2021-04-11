@@ -1,0 +1,97 @@
+Label.Title {
+    HorizontalAlignment = Center;
+    ScrollbarPolicy = Never;
+    Size = (1280, 48);
+    Text = "Welcome to NedoVator!";
+    TextSize = 36;
+
+    Renderer {
+        textcolor = white;
+        texturebackground = None;
+
+        scrollbar {
+            texturearrowdown = "themes/Black.png" Part(163, 174, 20, 20) Middle(0, 1, 20, 19);
+            texturearrowdownhover = "themes/Black.png" Part(183, 174, 20, 20) Middle(0, 1, 20, 19);
+            texturearrowup = "themes/Black.png" Part(163, 154, 20, 20) Middle(0, 0, 20, 19);
+            texturearrowuphover = "themes/Black.png" Part(183, 154, 20, 20) Middle(0, 0, 20, 19);
+            texturethumb = "themes/Black.png" Part(143, 154, 20, 20);
+            texturethumbhover = "themes/Black.png" Part(143, 174, 20, 20);
+            texturetrack = "themes/Black.png" Part(123, 154, 20, 20);
+            texturetrackhover = "themes/Black.png" Part(123, 174, 20, 20);
+        }
+    }
+}
+
+Label.LittleDescription {
+    HorizontalAlignment = Center;
+    Position = (0, 40);
+    ScrollbarPolicy = Never;
+    Size = (1280, 150);
+    Text = "NedoVator stands for NedoMotivator, which is a simple to-do list \napp, but with one additional thing!";
+    TextSize = 36;
+    VerticalAlignment = Center;
+
+    Renderer {
+        backgroundcolor = transparent;
+        bordercolor = #3C3C3C;
+        borders = (0, 0, 0, 0);
+        textcolor = white;
+        texturebackground = None;
+    }
+}
+
+Label.NedoDescription {
+    HorizontalAlignment = Center;
+    Position = (20, 260);
+    ScrollbarPolicy = Never;
+    Size = (500, 270);
+    Text = "A little character Nedo will track what tasks you're doing, failed to complete or already completed!";
+    TextSize = 36;
+    VerticalAlignment = Center;
+
+    Renderer {
+        backgroundcolor = transparent;
+        bordercolor = #3C3C3C;
+        borders = (0, 0, 0, 0);
+        textcolor = white;
+        texturebackground = None;
+    }
+}
+
+Button.Begin {
+    Position = (0, 660);
+    Size = (185, 60.2652);
+    Text = "Begin!";
+    TextSize = 36;
+
+    Renderer {
+        textcolor = rgb(190, 190, 190);
+        textcolorhover = rgb(250, 250, 250);
+        textstyle = Bold;
+        texture = "themes/Black.png" Part( 0, 64, 45, 50) Middle(10, 0, 25, 50);
+        texturedisabled = None;
+        texturedown = "themes/Black.png" Part(90, 64, 45, 50) Middle(10, 0, 25, 50);
+        texturefocused = "themes/Black.png" Part(135, 64, 45, 50) Middle(10, 0, 25, 50);
+        texturehover = "themes/Black.png" Part(45, 64, 45, 50) Middle(10, 0, 25, 50);
+    }
+}
+
+Picture.WavingNedo {
+    Position = (460, 140);
+    Size = (820, 585);
+
+    Renderer {
+        texture = None;
+        transparenttexture = false;
+    }
+}
+
+Picture.Arrow {
+    Position = (490, 210);
+    Size = (280, 100);
+
+    Renderer {
+        texture = None;
+        transparenttexture = false;
+    }
+}

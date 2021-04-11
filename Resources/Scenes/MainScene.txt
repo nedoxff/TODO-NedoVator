@@ -1,0 +1,333 @@
+Renderer.1 {
+    textcolor = rgb(190, 190, 190);
+    texturebackground = None;
+
+    scrollbar {
+        texturearrowdown = "themes/Black.png" Part(163, 174, 20, 20) Middle(0, 1, 20, 19);
+        texturearrowdownhover = "themes/Black.png" Part(183, 174, 20, 20) Middle(0, 1, 20, 19);
+        texturearrowup = "themes/Black.png" Part(163, 154, 20, 20) Middle(0, 0, 20, 19);
+        texturearrowuphover = "themes/Black.png" Part(183, 154, 20, 20) Middle(0, 0, 20, 19);
+        texturethumb = "themes/Black.png" Part(143, 154, 20, 20);
+        texturethumbhover = "themes/Black.png" Part(143, 174, 20, 20);
+        texturetrack = "themes/Black.png" Part(123, 154, 20, 20);
+        texturetrackhover = "themes/Black.png" Part(123, 174, 20, 20);
+    }
+}
+
+Panel.TaskPanel {
+    Position = (0, 160);
+    Size = (460, 140);
+    Visible = false;
+
+    Renderer {
+        backgroundcolor = rgb(80, 80, 80);
+        borders = (1, 1, 1, 1);
+        opacity = 1;
+        texturebackground = None;
+        transparenttexture = false;
+    }
+
+    Label.Title {
+        ScrollbarPolicy = Never;
+        Size = (380, 32);
+        Text = Placeholder;
+        TextSize = 24;
+        renderer = &1;
+    }
+
+    Label.Description {
+        Position = (0, 30);
+        ScrollbarPolicy = Never;
+        Size = (380, 74);
+        Text = Placeholder;
+        TextSize = 18;
+        renderer = &1;
+    }
+
+    Label.DueTo {
+        Position = (0, 110);
+        ScrollbarPolicy = Never;
+        Size = (380, 27);
+        Text = "Placeholder: Placeholder";
+        TextSize = 20;
+        renderer = &1;
+    }
+
+    Button.Done {
+        Position = (380, 0);
+        Size = (80, 70);
+        Text = Done;
+        TextSize = 20;
+
+        Renderer {
+            textcolor = rgb(190, 190, 190);
+            textcolorhover = rgb(250, 250, 250);
+            textstyle = Bold;
+            texture = "themes/Black.png" Part( 0, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturedisabled = None;
+            texturedown = "themes/Black.png" Part(90, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturefocused = "themes/Black.png" Part(135, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturehover = "themes/Black.png" Part(45, 64, 45, 50) Middle(10, 0, 25, 50);
+        }
+    }
+
+    Button.Failed {
+        Position = (380, 70);
+        Size = (80, 70);
+        Text = Failed;
+        TextSize = 20;
+
+        Renderer {
+            textcolor = rgb(190, 190, 190);
+            textcolorhover = rgb(250, 250, 250);
+            textstyle = Bold;
+            texture = "themes/Black.png" Part( 0, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturedisabled = None;
+            texturedown = "themes/Black.png" Part(90, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturefocused = "themes/Black.png" Part(135, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturehover = "themes/Black.png" Part(45, 64, 45, 50) Middle(10, 0, 25, 50);
+        }
+    }
+}
+
+Label.Time {
+    HorizontalAlignment = Center;
+    ScrollbarPolicy = Never;
+    Size = (1280, 70);
+    Text = Placeholder;
+    TextSize = 36;
+    VerticalAlignment = Center;
+
+    Renderer {
+        backgroundcolor = transparent;
+        bordercolor = None;
+        borders = (0, 0, 0, 0);
+        textcolor = white;
+        textoutlinecolor = black;
+        textoutlinethickness = 2;
+        texturebackground = None;
+    }
+}
+
+Button.CreateNewTask {
+    Position = (450, 70);
+    Size = (370, 65);
+    Text = "Create a new task..";
+    TextSize = 24;
+
+    Renderer {
+        textcolor = rgb(190, 190, 190);
+        textcolorhover = rgb(250, 250, 250);
+        textstyle = Bold;
+        texture = "themes/Black.png" Part( 0, 64, 45, 50) Middle(10, 0, 25, 50);
+        texturedisabled = None;
+        texturedown = "themes/Black.png" Part(90, 64, 45, 50) Middle(10, 0, 25, 50);
+        texturefocused = "themes/Black.png" Part(135, 64, 45, 50) Middle(10, 0, 25, 50);
+        texturehover = "themes/Black.png" Part(45, 64, 45, 50) Middle(10, 0, 25, 50);
+    }
+}
+
+ChildWindow.CreateTaskWindow {
+    Position = (550, 170);
+    Size = (470, 422.5);
+    Title = "New Task";
+    TitleAlignment = Center;
+    TitleButtons = Close;
+    Visible = false;
+
+    Renderer {
+        backgroundcolor = rgb( 80, 80, 80);
+        bordercolor = Black;
+        borders = (1, 1, 1, 1);
+        distancetoside = 5;
+        maximizebutton = {
+texture = "themes/Black.png" Part(48, 194, 15, 15);
+texturedown = "themes/Black.png" Part(78, 194, 15, 15);
+texturehover = "themes/Black.png" Part(63, 194, 15, 15);
+};
+        minimizebutton = {
+texture = "themes/Black.png" Part(93, 194, 15, 15);
+texturedown = "themes/Black.png" Part(123, 194, 15, 15);
+texturehover = "themes/Black.png" Part(108, 194, 15, 15);
+};
+        paddingbetweenbuttons = 2;
+        showtextontitlebuttons = false;
+        texturebackground = None;
+        texturetitlebar = "themes/Black.png" Part(48, 154, 75, 25) Middle(25, 0, 25, 25);
+        titlecolor = rgb(190, 190, 190);
+
+        closebutton {
+            texture = "themes/Black.png" Part(48, 179, 15, 15);
+            texturedown = "themes/Black.png" Part(78, 179, 15, 15);
+            texturehover = "themes/Black.png" Part(63, 179, 15, 15);
+        }
+    }
+
+    Label.CreateTitle {
+        AutoSize = true;
+        Position = (10, 40);
+        ScrollbarPolicy = Never;
+        Size = (66.8, 32);
+        Text = "Title:";
+        TextSize = 24;
+        renderer = &1;
+    }
+
+    Label.CreateDescription {
+        AutoSize = true;
+        Position = (10, 110);
+        ScrollbarPolicy = Never;
+        Size = (138.2, 29);
+        Text = "Description:";
+        TextSize = 22;
+        renderer = &1;
+    }
+
+    TextBox.DescriptionBox {
+        DefaultText = "Enter description here..";
+        HorizontalScrollbarPolicy = Always;
+        MaximumCharacters = 93;
+        Position = (170, 110);
+        Size = (278, 149.618);
+        Text = "";
+        TextSize = 18;
+
+        Renderer {
+            caretcolor = rgb(110, 110, 255);
+            padding = (3, 3, 3, 3);
+            selectedtextbackgroundcolor = rgb( 10, 110, 255);
+            selectedtextcolor = White;
+            textcolor = rgb(190, 190, 190);
+            texturebackground = "themes/Black.png" Part(0, 154, 48, 48) Middle(16, 16, 16, 16);
+
+            scrollbar {
+                texturearrowdown = "themes/Black.png" Part(163, 174, 20, 20) Middle(0, 1, 20, 19);
+                texturearrowdownhover = "themes/Black.png" Part(183, 174, 20, 20) Middle(0, 1, 20, 19);
+                texturearrowup = "themes/Black.png" Part(163, 154, 20, 20) Middle(0, 0, 20, 19);
+                texturearrowuphover = "themes/Black.png" Part(183, 154, 20, 20) Middle(0, 0, 20, 19);
+                texturethumb = "themes/Black.png" Part(143, 154, 20, 20);
+                texturethumbhover = "themes/Black.png" Part(143, 174, 20, 20);
+                texturetrack = "themes/Black.png" Part(123, 154, 20, 20);
+                texturetrackhover = "themes/Black.png" Part(123, 174, 20, 20);
+            }
+        }
+    }
+
+    Label.DueT {
+        AutoSize = true;
+        Position = (10, 290);
+        ScrollbarPolicy = Never;
+        Size = (61.8, 32);
+        Text = "Due:";
+        TextSize = 24;
+        renderer = &1;
+    }
+
+    EditBox.DueBox {
+        Alignment = Center;
+        DefaultText = "mm/dd/yyyy hh:mm:ss";
+        MaximumCharacters = 19;
+        Position = (90, 290);
+        Size = (360, 32);
+        TextSize = 18;
+
+        Renderer {
+            caretcolor = rgb(110, 110, 255);
+            defaulttextcolor = rgb(120, 120, 120);
+            padding = (6, 4, 6, 4);
+            selectedtextbackgroundcolor = rgb( 10, 110, 255);
+            selectedtextcolor = White;
+            textcolor = rgb(190, 190, 190);
+            texture = "themes/Black.png" Part(0, 114, 60, 40) Middle(15, 0, 30, 40);
+            texturedisabled = None;
+            texturefocused = "themes/Black.png" Part(120, 114, 60, 40) Middle(15, 0, 30, 40);
+            texturehover = "themes/Black.png" Part(60, 114, 60, 40) Middle(15, 0, 30, 40);
+        }
+    }
+
+    Button.Create {
+        Position = (160, 330);
+        Size = (158, 54.4828);
+        Text = "Create!";
+        TextSize = 18;
+
+        Renderer {
+            textcolor = rgb(190, 190, 190);
+            textcolorhover = rgb(250, 250, 250);
+            textstyle = Bold;
+            texture = "themes/Black.png" Part( 0, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturedisabled = None;
+            texturedown = "themes/Black.png" Part(90, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturefocused = "themes/Black.png" Part(135, 64, 45, 50) Middle(10, 0, 25, 50);
+            texturehover = "themes/Black.png" Part(45, 64, 45, 50) Middle(10, 0, 25, 50);
+        }
+    }
+
+    Label.Error {
+        HorizontalAlignment = Center;
+        Position = (0, 400);
+        ScrollbarPolicy = Never;
+        Size = (470, 18);
+        TextSize = 16;
+
+        Renderer {
+            textcolor = red;
+            texturebackground = None;
+
+            scrollbar {
+                texturearrowdown = "themes/Black.png" Part(163, 174, 20, 20) Middle(0, 1, 20, 19);
+                texturearrowdownhover = "themes/Black.png" Part(183, 174, 20, 20) Middle(0, 1, 20, 19);
+                texturearrowup = "themes/Black.png" Part(163, 154, 20, 20) Middle(0, 0, 20, 19);
+                texturearrowuphover = "themes/Black.png" Part(183, 154, 20, 20) Middle(0, 0, 20, 19);
+                texturethumb = "themes/Black.png" Part(143, 154, 20, 20);
+                texturethumbhover = "themes/Black.png" Part(143, 174, 20, 20);
+                texturetrack = "themes/Black.png" Part(123, 154, 20, 20);
+                texturetrackhover = "themes/Black.png" Part(123, 174, 20, 20);
+            }
+        }
+    }
+
+    EditBox.TitleBox {
+        Alignment = Center;
+        DefaultText = "Enter title here..";
+        MaximumCharacters = 19;
+        Position = (100, 40);
+        Size = (360, 32);
+        TextSize = 18;
+
+        Renderer {
+            caretcolor = rgb(110, 110, 255);
+            defaulttextcolor = rgb(120, 120, 120);
+            padding = (6, 4, 6, 4);
+            selectedtextbackgroundcolor = rgb( 10, 110, 255);
+            selectedtextcolor = White;
+            textcolor = rgb(190, 190, 190);
+            texture = "themes/Black.png" Part(0, 114, 60, 40) Middle(15, 0, 30, 40);
+            texturedisabled = None;
+            texturefocused = "themes/Black.png" Part(120, 114, 60, 40) Middle(15, 0, 30, 40);
+            texturehover = "themes/Black.png" Part(60, 114, 60, 40) Middle(15, 0, 30, 40);
+        }
+    }
+}
+
+Scrollbar.Scrollbar {
+    AutoHide = true;
+    Maximum = 4;
+    Position = (460, 160);
+    ScrollAmount = 1;
+    Size = (16, 560);
+    Value = 0;
+    ViewportSize = 1;
+    Visible = false;
+
+    Renderer {
+        texturearrowdown = "themes/Black.png" Part(163, 174, 20, 20) Middle(0, 1, 20, 19);
+        texturearrowdownhover = "themes/Black.png" Part(183, 174, 20, 20) Middle(0, 1, 20, 19);
+        texturearrowup = "themes/Black.png" Part(163, 154, 20, 20) Middle(0, 0, 20, 19);
+        texturearrowuphover = "themes/Black.png" Part(183, 154, 20, 20) Middle(0, 0, 20, 19);
+        texturethumb = "themes/Black.png" Part(143, 154, 20, 20);
+        texturethumbhover = "themes/Black.png" Part(143, 174, 20, 20);
+        texturetrack = "themes/Black.png" Part(123, 154, 20, 20);
+        texturetrackhover = "themes/Black.png" Part(123, 174, 20, 20);
+    }
+}

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="SFML.Portable" Version="1.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+        <HintPath>dlls\Newtonsoft.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="SFML.Portable, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>dlls\SFML.Portable.dll</HintPath>
+      </Reference>
+      <Reference Include="TGUI_Portable, Version=0.8.8.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>dlls\TGUI_Portable.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
